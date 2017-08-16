@@ -8,9 +8,9 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $_msg = $arrJson['events'][0]['message']['text'];
 
-// $api_key="<MLAB APIKEY>";
-// $url = 'https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'';
-// $json = file_get_contents('https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
+$api_key="<MLAB APIKEY>";
+$url = 'https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'';
+$json = file_get_contents('https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
 
 
 
@@ -29,13 +29,13 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
   //       'answer'=> $_answer
   //     )
   //   );
-  //   $opts = array(
-  //     'http' => array(
-  //         'method' => "POST",
-  //         'header' => "Content-type: application/json",
-  //         'content' => $newData
-  //      )
-  //   );
+    $opts = array(
+      'http' => array(
+          'method' => "POST",
+          'header' => "Content-type: application/json",
+          'content' => $newData
+       )
+    );
 
     $context = stream_context_create($opts);
     $returnValue = file_get_contents($url,false,$context);
