@@ -38,34 +38,6 @@ if (!is_null($events['events'])) {
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 
-"type": "ເມນູ",
-  "altText": "ລາຍການ",
-  "template": {
-      "type": "buttons",
-      "thumbnailImageUrl": "http://i68.tinypic.com/358ui5g.png",
-      "title": "ລາຍການທີ 1",
-      "text": "ກະລຸນາເລືອກລາຍການ",
-      "actions": [
-          {
-            "type": "postback",
-            "label": "ຖ້ຽວບິນພາຍໃນ",
-            "data": "action=buy&itemid=123"
-          },
-          {
-            "type": "postback",
-            "label": "ຖ້ຽວບິນຕ່າງປະເທດ",
-            "data": "action=add&itemid=123"
-          },
-          {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "http://example.com/page/123"
-          }
-      ]
-  }
-}
-
-
 
 
 
