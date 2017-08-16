@@ -22,13 +22,15 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
   //   $pieces = explode("|", $x_tra);
   //   $_question=str_replace("[","",$pieces[0]);
   //   $_answer=str_replace("]","",$pieces[1]);
-  //   //Post New Data
-  //   $newData = json_encode(
-  //     array(
-  //       'question' => $_question,
-  //       'answer'=> $_answer
-  //     )
-  //   );
+
+    
+    //Post New Data
+    $newData = json_encode(
+      array(
+        'question' => $_question,
+        'answer'=> $_answer
+      )
+    );
     $opts = array(
       'http' => array(
           'method' => "POST",
